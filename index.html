@@ -1,0 +1,314 @@
+<html>
+<head>
+<title>Calculator</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="https://unpkg.com/mathjs/lib/browser/math.js"></script>
+<script>
+var s = "";
+var s1 = "";
+</script>
+<script>
+$(document).ready(function(){
+$("#textbutton").html(s);
+$(".button").mouseenter(function(){
+  //The mouseover 
+  $(this).css("background-color","rgb(20,20,20)");
+    $(this).css('cursor', 'pointer');
+    
+});
+$(".button").click(function(){
+  //The mouseover 
+  $(this).css("background-color","rgb(0,0,0)");
+
+    
+});
+$(".button").mouseleave(function(){
+  //The mouseover 
+  $(this).css("background-color","rgb(30,30,30)");
+$(this).css('cursor', 'default');
+         
+});
+$(".last").mouseenter(function(){
+  //The mouseover 
+  $(this).css("background-color","rgb(154,90,50)");    
+$(this).css('cursor', 'pointer');
+});
+$(".last").mouseleave(function(){
+  //The mouseover 
+   $(this).css("background-color","rgb(184,120,80)");  
+$(this).css('cursor', 'default');
+});
+$(".last").click(function(){
+  //The mouseover 
+   $(this).css("background-color","rgb(124,50,10)");  
+});
+$("#zero").mouseenter(function(){
+  //The mouseover 
+    $(this).css("background-color","rgb(20,20,20)");
+$(this).css('cursor', 'pointer');   
+});
+$("#zero").click(function(){
+  //The mouseover 
+    $(this).css("background-color","rgb(0,0,0)");   
+});
+$("#zero").mouseleave(function(){
+  //The mouseover 
+ $(this).css("background-color","rgb(30,30,30)"); 
+$(this).css('cursor', 'default');       
+});
+});
+</script>
+<script>
+$(document).ready(function(){
+$("#neg").click(function(){
+  //The mouseover
+s='-' +s;
+s1='-' +s1;
+  $("#textbutton").html(s);
+    
+});
+$("#modulo").click(function(){
+  s+='%';
+s1+='%';
+  $("#textbutton").html(s);
+    
+});
+$("#divide").click(function(){
+  s+='/';
+s1+='/';
+  $("#textbutton").html(s);
+    
+    
+});
+$("#one").click(function(){
+  //The mouseover 
+  s+=1;
+s1+='1';
+$("#textbutton").html(s);
+    
+});
+$("#two").click(function(){
+  s+=2;
+s1+='2';
+$("#textbutton").html(s);
+    
+});
+$("#three").click(function(){
+  s+=3;
+s1+='3';
+  $("#textbutton").html(s);
+    
+});
+$("#multiply").click(function(){
+  s+='x'; 
+s1+='*';
+  $("#textbutton").html(s);
+    
+});
+$("#four").click(function(){
+  //The mouseover
+s+=4; 
+s1+='4';
+  $("#textbutton").html(s);
+    
+});
+$("#five").click(function(){
+  //The mouseover 
+s+=5;
+s1+='5';
+  $("#textbutton").html(s);
+    
+});
+$("#six").click(function(){
+  //The mouseover 
+s+=6;
+s1+='6';
+  $("#textbutton").html(s);
+    
+});
+$("#seven").click(function(){
+  //The mouseover 
+s+=7;
+s1+='7';
+  $("#textbutton").html(s);
+    
+});
+$("#eight").click(function(){
+  //The mouseover 
+s+=8;
+s1+='8';
+  $("#textbutton").html(s);
+    
+});
+$("#nine").click(function(){
+  //The mouseover 
+     s+=9;
+s1+='9';
+  $("#textbutton").html(s);
+    
+});
+$("#plus").click(function(){
+  //The mouseover 
+s+='+';
+s1+='+';
+  $("#textbutton").html(s);
+    
+});
+$("#minus").click(function(){
+  //The mouseover 
+s+='-';
+s1+='-';
+  $("#textbutton").html(s);
+    
+});
+$("#zero").click(function(){
+  //The mouseover 
+s+=0;
+s1+='0';
+  $("#textbutton").html(s);
+    
+});
+$("#decimal").click(function(){
+  //The mouseover 
+s+='.';
+s1+='.';
+  $("#textbutton").html(s);
+    
+});
+$("#equal").click(function(){
+  s = math.evaluate(s1);
+s1 = s;
+$("#textbutton").html(s);
+    
+});
+$("#C").click(function(){
+  //The mouseover 
+  s ="";
+s1 = "";
+     $("#textbutton").html(s);
+});
+});
+</script>
+<style>
+
+body{
+caret-color: transparent;}
+table{
+border-spacing:0;
+}
+#cal{
+border-radius:25px;
+position:relative;
+top:100px;
+left:500px;
+background-color: black;
+width:380px;
+height:450px;
+}
+.button{
+
+position:relative;
+top:15px;
+left:15px;
+width:80px;
+height:80px;
+border-radius:50px;
+text-align :center;
+font-size:40px;
+color :white;
+background-color:rgb(30,30,30);
+
+}
+.last{
+
+position:relative;
+top:15px;
+left:15px;
+width:80px;
+height:80px;
+border-radius:50px;
+text-align :center;
+font-size:40px;
+color :white;
+background-color:rgb(184,120,90);
+
+}
+#zero{
+position:relative;
+top:15px;
+left:15px;
+width:170px;
+height:75px;
+border-radius:50px;
+text-align :center;
+font-size:40px;
+color :white;
+background-color:rgb(30,30,30);
+}
+
+td{
+column-gap: 20px;
+line-height: 75px;
+
+}
+#text{
+border-radius:25px;
+position:relative;
+top:95px;
+left:500px;
+background-color: black;
+width:380px;
+height:120px;
+}
+#textbutton{
+vertical-align: bottom;
+font-size:40px;
+color :white;
+}
+</style>
+</head>
+<body>
+<div id = "text">
+<table cellpadding="10px">
+<tr>
+<td ><div id ="textbutton"></div></td>
+</tr>
+</table>
+</div>
+<div id = "cal">
+<table valign = "center" cellspacing="1px" cellpadding = "3px">
+<tr>
+<td valign = "center"><div class = "button" id ="C">C</div></td> 
+<td><div class = "button" id ="neg">+/-</div></td>
+<td><div class = "button" id ="modulo">%</div></td>
+<td><div class = "last" id ="divide">/</div></td>
+</tr>
+<tr>
+<td><div class = "button" id ="seven">7</div></td> 
+<td><div class = "button" id ="eight" >8</div></td>
+<td><div class = "button" id ="nine">9</div></td>
+<td><div class = "last" id ="multiply">x</div></td>
+</tr>
+<tr>
+<td><div class = "button" id ="four">4</div></td> 
+<td><div class = "button" id ="five" >5</div></td>
+<td><div class = "button" id ="six" >6</div></td>
+<td><div class = "last" id ="minus" >-</div></td>
+</tr>
+<tr>
+<td><div class = "button" id ="one" >1</div></td> 
+<td><div class = "button" id ="two" >2</div></td>
+<td><div class = "button" id ="three">3</div></td>
+<td><div class = "last"  id ="plus">+</div></td>
+</tr>
+<tr>
+<td colspan="2"><div id = "zero">0</div></td> 
+<td><div class = "button" id ="decimal">.</div></td>
+<td><div class = "last" id ="equal" >=</div></td>
+</tr>
+
+</table>
+</div>
+</body>
+
+</html>
